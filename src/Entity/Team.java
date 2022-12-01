@@ -1,54 +1,84 @@
 package Entity;
 
 
+import java.util.Objects;
+
 /*
  *  Represents the TEAMS table in database.
  */
 public class Team {
 
     private int id;
-    private String league;
-    private String nationality;
-    private int wins;
-    private String losses;
 
-    public int getTeam_id() {
+    private String name;
+
+    private String town;
+
+    private League league;
+
+    private int leagueRank;
+
+    public int getId() {
         return id;
     }
 
-    public void setTeam_id(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getLeague() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+    public League getLeague() {
         return league;
     }
 
-    public void setLeague(String league) {
+    public void setLeague(League league) {
         this.league = league;
     }
 
-    public String getNationality() {
-        return nationality;
+    public int getLeagueRank() {
+        return leagueRank;
     }
 
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
+    public void setLeagueRank(int leagueRank) {
+        this.leagueRank = leagueRank;
     }
 
-    public int getWins() {
-        return wins;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return id == team.id && leagueRank == team.leagueRank && Objects.equals(name, team.name) && Objects.equals(town, team.town) && Objects.equals(league, team.league);
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, town, league, leagueRank);
     }
 
-    public String getLosses() {
-        return losses;
-    }
-
-    public void setLosses(String losses) {
-        this.losses = losses;
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", town='" + town + '\'' +
+                ", league=" + league +
+                ", leagueRank=" + leagueRank +
+                '}';
     }
 }
