@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 
 import java.util.Objects;
@@ -77,7 +77,7 @@ public class Team {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", town='" + town + '\'' +
-                ", league=" + league +
+                ", league=" + league.getName() +
                 ", leagueRank=" + leagueRank +
                 '}';
     }

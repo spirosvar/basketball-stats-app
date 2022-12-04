@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 
 import java.util.Objects;
@@ -10,7 +10,7 @@ public class League {
     private int league_id;
     private String nationality;
     private int division;
-
+    private String name;
     public League() {
     }
 
@@ -44,6 +44,14 @@ public class League {
         this.division = division;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,6 +71,7 @@ public class League {
                 "league_id=" + league_id +
                 ", nationality='" + nationality + '\'' +
                 ", division=" + division +
+                ", name=" + name +
                 '}';
     }
 }

@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import java.util.Objects;
 
@@ -79,8 +79,8 @@ public class Coach {
                 "coach_id=" + coach_id +
                 ", fullname='" + fullname + '\'' +
                 ", nationality='" + nationality + '\'' +
-                ", team=" + team +
-                ", league=" + league +
+                ", team=" + team.getName() +
+                ", league=" + league.getName() +
                 '}';
     }
 }

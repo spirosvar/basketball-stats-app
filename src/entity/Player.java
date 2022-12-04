@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import java.util.Objects;
 
@@ -107,8 +107,7 @@ public class Player {
         return "Player{" +
                 "id=" + id +
                 ", fullname='" + fullname + '\'' +
-                ", team=" + team +
-                ", playerStats=" + playerStats +
+                ", team=" + team.getName() +
                 ", nationality='" + nationality + '\'' +
                 ", age=" + age +
                 ", position='" + position + '\'' +
